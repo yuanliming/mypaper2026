@@ -58,18 +58,8 @@ optimize(problem, gamma,options);
 K_svinf = value(R)*inv(value(X)) 
 gamma=(value(gamma))
 toc
-%K_svinf =[0 0 0 -1664.71 -47.71 -0.50]; %tie
 vertex1=norm(ss(A1-B21*K_svinf,B1,C-D*K_svinf,zeros(4,6)),inf)
 vertex2=norm(ss(A2-B22*K_svinf,B1,C-D*K_svinf,zeros(4,6)),inf)
 vertex3=norm(ss(A3-B23*K_svinf,B1,C-D*K_svinf,zeros(4,6)),inf)
 vertex4=norm(ss(A4-B24*K_svinf,B1,C-D*K_svinf,zeros(4,6)),inf)
 
- %eig(A1-B21*K_sv)
-
- % 创建闭环系统
-% A_cl = A1 - B21*K_sv;
-% C_cl = C - D*K_sv;
-% sys_cl = ss(A_cl, B1, C_cl, 0); % 注意这里D矩阵为0
-% 
-% % 计算H2范数
-% h2_norm = norm(sys_cl, 2)
