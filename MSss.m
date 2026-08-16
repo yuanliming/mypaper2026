@@ -1,7 +1,7 @@
-function [A,B2] = MSSS(dm, dd)
+function [A,B2] = MSss(dm, dd)
 m=1/400;
 d=1/200;
- a1=-125;a2=-75;a3=-15;
+a1=-125;a2=-75;a3=-15;
 
 A=[0 1 0 0 0 0;
    0 0 1 0 0 0;
